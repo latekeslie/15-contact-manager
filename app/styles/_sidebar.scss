@@ -1,28 +1,51 @@
 
 
+
+
 .sidebar {
   width: 20%;
   height: 100vh;
   background-color: $c-blue;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 5px 6px #ccc;
+
+  .input-container {
+    flex-grow: 1;
+
+  }
+
+  header {
+    box-shadow: 0 8px 6px -6px black;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  input {
+    padding: 1rem;
+  }
+
 
   h3 {
     margin: 0;
-    background-color: $c-lightblue;
     padding: 1rem;
+    background-color: $c-lightblue;
     font-size: 2rem;
   }
 
-  .button {
-    background-color: $c-green;
-    color: $c-grey;
-  }
 
   li {
     margin: 2rem;
     font-size: 1.5rem;
   }
 
-  button{
+  button {
+    padding: 2rem;
+    background-color: $c-green;
+    color: $c-red;
+    font-size: 1.5rem;
 
   }
 
