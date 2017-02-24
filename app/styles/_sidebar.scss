@@ -1,0 +1,29 @@
+
+
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: $c-blue;
+
+  h3 {
+    margin: 0;
+    background-color: $c-lightblue;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .button {
+    background-color: $c-green;
+    color: $c-grey;
+  }
+
+  li {
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
+
+  button{
+
+  }
+
+}
