@@ -1,5 +1,5 @@
-export default function reducer() {
-
+export default function reducer(state) {
+  return state;
 }
 //
 // export default function reducer(state, action) {

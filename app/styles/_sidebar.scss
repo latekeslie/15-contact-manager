@@ -12,6 +12,7 @@
 
   .input-container {
     flex-grow: 1;
+    margin-left: 0;
 
   }
 
@@ -24,6 +25,7 @@
   }
 
   input {
+    width: 100%;
     padding: 1rem;
   }
 
@@ -33,6 +35,11 @@
     padding: 1rem;
     background-color: $c-lightblue;
     font-size: 2rem;
+  }
+
+  ul {
+    margin-left: 0;
+    padding: 0;
   }
 
 

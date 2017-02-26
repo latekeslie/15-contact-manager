@@ -9,7 +9,7 @@ import reducer from './reducer';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // What do we want our "state" to be when we start our app?
-const initialState = { contact: [] };
+const initialState = { contacts: [] };
 
 // Actually build the redux store for our app
 const store = createStore(
