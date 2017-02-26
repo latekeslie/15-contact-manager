@@ -20,8 +20,6 @@ export default class FormView {
       };
 
       this.store.dispatch({ type: 'CONTACT@CREATE', data });
-
-
     });
   }
 }
