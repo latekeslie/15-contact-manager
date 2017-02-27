@@ -3,14 +3,17 @@ class ItemView {
     this.data = data;
     this.store = store;
 
-    this.el = document.createElement('li');
+    this.el = document.createElement('div');
     this.el.classList.add('contact-card');
     this.el.innerHTML = `
-    <h3 class="name"></h3>
-    <p class="street"></p>
-    <p class="city-state"></p>
-    <button class="delete">Delete</button>
-      `;
+    <div class="inner-contact--card">
+      <h3 class="name">Mr. Sniffles</h3>
+      <p class="street">727 S 13th St.</p>
+      <p class="city-state">Nashville, TN</p>
+      <div class="button-container">
+        <button type="button" name="button" class="delete">Delete</button>
+      </div>
+    </div>`;
   }
 
   mounted() {}

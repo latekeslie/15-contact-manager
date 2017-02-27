@@ -3,12 +3,13 @@
 
 
 .sidebar {
-  width: 20%;
+  min-width: 20%;
   height: 100vh;
   background-color: $c-blue;
   display: flex;
   flex-direction: column;
   box-shadow: 3px 3px 5px 6px #ccc;
+  position: relative;
 
   .input-container {
     flex-grow: 1;
@@ -49,10 +50,13 @@
   }
 
   button {
+    width: 100%;
     padding: 2rem;
     background-color: $c-green;
     color: $c-red;
     font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
 
   }
 
