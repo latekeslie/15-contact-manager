@@ -1,5 +1,7 @@
 import FormView from '../view/form';
 import ListView from '../view/list';
+import { findAll } from '../actions';
+
 
 export default class AppController {
   constructor(el, store) {
@@ -26,6 +28,7 @@ export default class AppController {
     // Get the stringified list of snacks or a default of an empty array
     const dataString = window.localStorage.contacts || '[]';
     // Dispatch FIND_ALL to the store with the data loaded from localstorage
-    this.store.dispatch({ type: 'CONTACT@FIND_ALL', data: JSON.parse(dataString) });
+    const action = findAll(JSON.parse(dataString));
+    this.store.dispatch(action);
   }
 }

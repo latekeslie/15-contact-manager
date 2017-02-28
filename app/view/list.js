@@ -1,3 +1,5 @@
+import { remove } from '../actions';
+
 class ItemView {
   constructor(data, store) {
     this.data = data;
@@ -16,7 +18,11 @@ class ItemView {
     </div>`;
   }
 
-  mounted() {}
+  mounted(contact) {
+    this.el.querySelector('.delete').addEventListener('click', () => {
+      remove(contact.id);
+    });
+  }
 
   render() {
     this.el.querySelector('.name').innerText = `${this.data.firstName} ${this.data.lastName}`;
@@ -49,7 +55,7 @@ export default class ListView {
     contacts.forEach((contact) => {
       // Create a new item view...
       const view = new ItemView(contact, this.store);
-      view.mounted();
+      view.mounted(contact);
       view.render();
 
       // Add the view's element into the list element

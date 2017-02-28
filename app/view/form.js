@@ -1,3 +1,4 @@
+import {create} from '../actions';
 export default class FormView {
   constructor(el, store) {
     this.el = el;
@@ -18,8 +19,8 @@ export default class FormView {
         city: this.el.querySelector('.city__input').value,
         state: this.el.querySelector('.state__input').value,
       };
-
-      this.store.dispatch({ type: 'CONTACT@CREATE', data });
+      const action = create(data);
+      this.store.dispatch(action);
     });
   }
 }
