@@ -8,6 +8,5 @@ export function create(contact) {
 };
 
 export function remove(id) {
-  console.log(id);
   return { type: 'CONTACT@REMOVE', data: id};
 };

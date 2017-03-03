@@ -49,28 +49,28 @@ module('reducer', () => {
     assert.equal(newState.contacts.length, 2, 'it has two items in the array');
   });
 
-  test('CONTACT@REMOVE', (assert) => {
+  test('CONTACT@REMOVE the only item based on id', (assert) => {
     const oldState = { contacts: [{ firstName: 'Pad', lastName: 'Thai', id: 'cat' }] };
     const action = { type: 'CONTACT@REMOVE', data: 'cat' };
     const newState = reducer(oldState, action);
 
-    assert.equal(newState.contacts.length, 0, 'it removes the only contact');
+    assert.deepEqual(newState, { contacts: [] }, 'it removes the only contact');
 
   });
 
-  test('CONTACT@REMOVE', (assert) => {
+  test('CONTACT@REMOVE based on id leave all others', (assert) => {
     const oldState = { contacts: [{ firstName: 'Pad', lastName: 'Thai', id: 'cat' }, { firstName: 'Mr.', lastName: 'Sniffles', id: 'othercat' }] };
     const action = { type: 'CONTACT@REMOVE', data: 'othercat' };
-    const newState = reducer(oldState, action);
+    const expectedState = { contacts: [{ firstName: 'Pad', lastName: 'Thai', id: 'cat' }] };
 
-    assert.equal(newState.contacts.length, 1, 'it removes only one contact');
+    assert.deepEqual(reducer(oldState, action), expectedState);
   });
 
-  test('CONTACT@REMOVE', (assert) => {
+  test('CONTACT@REMOVE with an id that doesn\'t exist in the contacts array', (assert) => {
     const oldState = { contacts: [{ firstName: 'Pad', lastName: 'Thai', id: 'cat' }] };
     const action = { type: 'CONTACT@REMOVE', data: 'dog' };
-    const newState = reducer(oldState, action);
+    const expectedState = { contacts: [{ firstName: 'Pad', lastName: 'Thai', id: 'cat' }] };
 
-    assert.equal(newState.contacts.length, 1, 'it stays the same if there is not a matching id to remove');
+    assert.deepEqual(reducer(oldState, action), expectedState);
   });
 });
