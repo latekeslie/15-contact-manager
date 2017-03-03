@@ -1,0 +1,61 @@
+
+
+
+
+.sidebar {
+  min-width: 20%;
+  height: 100vh;
+  background-color: $c-blue;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  position: relative;
+
+  .input-container {
+    flex-grow: 1;
+    margin-left: 0;
+
+  }
+
+  header {
+    box-shadow: 0 8px 6px -6px black;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem;
+  }
+
+
+  h3 {
+    margin: 0;
+    padding: 1rem;
+    background-color: $c-lightblue;
+    font-size: 2rem;
+  }
+
+  ul {
+    margin-left: 0;
+    padding: 0;
+  }
+
+
+  li {
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 2rem;
+    background-color: $c-green;
+    color: $c-red;
+    font-size: 1.5rem;
+
+  }
+
+}

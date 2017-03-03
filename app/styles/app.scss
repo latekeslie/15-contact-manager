@@ -3,4 +3,24 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+$c-blue: #1aabd9;
+$c-lightblue: #addbec;
+$c-red: #d9490d;
+$c-grey: #c8c8c8;
+$c-green: #7ccb8f;
+
 @import 'box-sizing';
+@import 'sidebar';
+@import 'contact-container';
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
